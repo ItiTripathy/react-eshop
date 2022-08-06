@@ -14,7 +14,7 @@ const Nav = () => {
                 <NavLink to="/Shop" className={styles.NavLink}>
                     Shop
                 </NavLink>
-                <NavLink to="/Cart" className={styles.NavLink}>
+                <NavLink to="/ShoppingCart" className={styles.NavLink}>
                     <span>
                         <FontAwesomeIcon icon="fa-solid fa-shop" />
                     </span>
