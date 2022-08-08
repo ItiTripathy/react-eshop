@@ -1,21 +1,18 @@
 .Card {
     margin: 10px;
     padding: 10px;
-    display: block;
+    display: flex;
     border: black 2px solid;
-    width: 25rem;
-    font-size: 20px;
-    background-image: linear-gradient(
-        120deg,
-        #9ecafb 0%,
-        #6592b7,
-        #4d8bfd 100%
-    );
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Times New Roman", Times, serif;
+    font-size: x-large;
 }
 
 .Image {
-    height: 25rem;
-    width: 22rem;
+    height: 400px;
+    width: 400px;
 }
 
 .Button {
@@ -23,18 +20,20 @@
     height: 3rem;
     width: 10rem;
     border: none;
-    background-color: blanchedalmond;
+    background-color: aquamarine;
     font-size: 20px;
 }
 
 .Color {
-    width: 10rem;
-    height: 1.2rem;
+    width: 150px;
+    height: 40px;
+    margin: 20px;
 }
 
 .Size {
-    width: 10rem;
-    height: 1.2rem;
+    width: 150px;
+    height: 40px;
+    margin: 20px;
 }
 
 .Count {
