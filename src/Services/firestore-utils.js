@@ -1,8 +1,8 @@
 import { firestore } from "./firestore";
 
-export const getCarData = async () => {
+export const getBagsData = async () => {
     //Specify the collection
-    const collectionRef = firestore.collection("car");
+    const collectionRef = firestore.collection("bags");
 
     // Get records from that collection
 
@@ -12,8 +12,8 @@ export const getCarData = async () => {
 
     const rawDocuments = data.docs;
     //console.log(rawData);
-    console.log(rawDocuments[0].data());
-    console.log(rawDocuments[0].id);
+    //console.log(rawDocuments[0].data());
+    //console.log(rawDocuments[0].id);
 
     const cleanedDocuments = rawDocuments.map((rawDoc) => ({
         ...rawDoc.data(),

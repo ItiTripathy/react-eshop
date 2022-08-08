@@ -2,8 +2,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 25%);
-    gap: 30px;
-    padding-bottom: 30px;
+    gap: 150px;
+    padding: 30px;
     //border: 1px solid black;
 }
 
@@ -11,6 +11,7 @@
     padding: 30px;
     font-size: 30px;
     background-color: aquamarine;
+    //margin: 60px;
 }
 
 .Image {

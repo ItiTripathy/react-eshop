@@ -1,18 +1,19 @@
 import React from "react";
 import styles from "./Product.module.scss";
 import { NavLink } from "react-router-dom";
-import { getCarData } from "../../Services/firestore-utils";
+//import { getCarData } from "../../Services/firestore-utils";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Card from "../../Components/Card/Card";
+import { getBagsData } from "../../Services/firestore-utils";
 
 const Product = () => {
-    const [carData, setCarData] = useState([]);
+    const [bagsData, setBagsData] = useState([]);
 
     useEffect(() => {
         const wrapper = async () => {
-            const cars = await getCarData();
-            setCarData(cars);
+            const bags = await getBagsData();
+            setBagsData(bags);
         };
 
         wrapper();
@@ -20,9 +21,9 @@ const Product = () => {
 
     const params = useParams();
 
-    if (carData.length < 1) return <h1>Product does not exsist</h1>;
+    if (bagsData.length < 1) return <h1>Product does not exsist</h1>;
 
-    const newProduct = carData.find((item) => item.id === params.id);
+    const newProduct = bagsData.find((item) => item.id === params.id);
 
     return (
         <div className={styles.Product}>

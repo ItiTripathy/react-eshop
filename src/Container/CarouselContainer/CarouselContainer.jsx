@@ -3,16 +3,18 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import styles from "./CarouselContainer.module.scss";
 import { NavLink } from "react-router-dom";
-import { getCarData } from "../../Services/firestore-utils";
+//import { getCarData } from "../../Services/firestore-utils";
 import { useState, useEffect } from "react";
+import { getBagsData } from "../../Services/firestore-utils";
 
 const CarouselContainer = () => {
-    const [carData, setCarData] = useState([]);
+    //const [carData, setCarData] = useState([]);
+    const [bagsData, setBagsData] = useState([]);
 
     useEffect(() => {
         const wrapper = async () => {
-            const cars = await getCarData();
-            setCarData(cars);
+            const bags = await getBagsData();
+            setBagsData(bags);
         };
 
         wrapper();
@@ -47,12 +49,16 @@ const CarouselContainer = () => {
                 transitionDuration={100}
                 className="carousel-div"
             >
-                {carData.map((item) => {
+                {bagsData.map((item) => {
                     return (
                         <div key={item.id}>
                             <NavLink to={"/product/" + item.id}>
                                 <h3>{item.name}</h3>
-                                <h3>{item.model}</h3>
+                                <img
+                                    className={styles.Image}
+                                    src={item.imgUrl}
+                                    alt={item.name}
+                                />
                             </NavLink>
                         </div>
                     );
