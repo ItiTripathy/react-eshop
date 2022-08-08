@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Nav.module.scss";
 import { NavLink } from "react-router-dom";
 import Home from "./../Home/Home";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Nav = () => {
     return (
@@ -15,9 +15,9 @@ const Nav = () => {
                     Shop
                 </NavLink>
                 <NavLink to="/ShoppingCart" className={styles.NavLink}>
-                    <span>
+                    {/* <span>
                         <FontAwesomeIcon icon="fa-solid fa-shop" />
-                    </span>
+                    </span> */}
                     Shopping Cart
                 </NavLink>
             </nav>

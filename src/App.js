@@ -4,8 +4,12 @@ import Nav from "./Components/Nav/Nav";
 import Home from "./Components/Home/Home";
 import Shop from "./Components/Shop/Shop";
 import ShoppingCart from "./Container/ShoppingCart/ShoppingCart";
+import { useState, useEffect } from "react";
+import { getCarData } from "./Services/firestore-utils";
 
 function App() {
+    
+
     return (
         <div className="App">
             <BrowserRouter>

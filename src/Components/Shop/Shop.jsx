@@ -1,11 +1,12 @@
 import React from "react";
-import Carousel from "./../../Container/Carousel/Carousel";
+import CarouselContainer from "../../Container/CarouselContainer/CarouselContainer";
 import Grid from "./../../Container/Grid/Grid";
 
 const Shop = () => {
     return (
         <>
-            <Carousel />
+            <h1>Shop</h1>
+            <CarouselContainer />
             <Grid />
         </>
     );
