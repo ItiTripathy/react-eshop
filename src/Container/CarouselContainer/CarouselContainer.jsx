@@ -39,7 +39,7 @@ const CarouselContainer = () => {
 
     return (
         <>
-            <h2>Featured Items</h2>
+            <h2 className={styles.Header}>Featured Items</h2>
             <Carousel
                 responsive={responsive}
                 autoPlay

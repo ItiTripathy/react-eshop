@@ -1,0 +1,19 @@
+.Grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 25%);
+    gap: 30px;
+    padding-bottom: 30px;
+    //border: 1px solid black;
+}
+
+.Header {
+    padding: 30px;
+    font-size: 30px;
+    background-color: aquamarine;
+}
+
+.Image {
+    height: 18rem;
+    width: 15rem;
+}

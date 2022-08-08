@@ -1,0 +1,53 @@
+.Card {
+    margin: 10px;
+    padding: 10px;
+    display: block;
+    border: black 2px solid;
+    width: 25rem;
+    font-size: 20px;
+    background-image: linear-gradient(
+        120deg,
+        #9ecafb 0%,
+        #6592b7,
+        #4d8bfd 100%
+    );
+}
+
+.Image {
+    height: 25rem;
+    width: 22rem;
+}
+
+.Button {
+    margin: 20px;
+    height: 3rem;
+    width: 10rem;
+    border: none;
+    background-color: blanchedalmond;
+    font-size: 20px;
+}
+
+.Color {
+    width: 10rem;
+    height: 1.2rem;
+}
+
+.Size {
+    width: 10rem;
+    height: 1.2rem;
+}
+
+.Count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+.Increment {
+    width: 2rem;
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+}
