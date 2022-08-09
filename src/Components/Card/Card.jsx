@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Card.module.scss";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { addItemToCart } from "../../Services/firestore-utils";
 
 const Card = ({ item }) => {
     const [count, setCount] = useState(1);
@@ -12,6 +13,16 @@ const Card = ({ item }) => {
     const increment = (n) => {
         const newCount = count + n;
         setCount(newCount);
+    };
+
+    const handleAddToCart = (item, count) => {
+        let cartItem = {
+            name: item.name,
+            quantity: count,
+            price: item.price,
+        };
+
+        addItemToCart(cartItem);
     };
 
     return (
@@ -73,7 +84,15 @@ const Card = ({ item }) => {
                 </button>
             </div>
 
-            <button className={styles.Button}>Add to cart</button>
+            <button
+                className={styles.Button}
+                onClick={() => {
+                    handleAddToCart(item, count);
+                    navigate("/ShoppingCart");
+                }}
+            >
+                Add to cart
+            </button>
         </div>
     );
 };
