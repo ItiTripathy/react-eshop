@@ -6,9 +6,11 @@ import { addItemToCart } from "../../Services/firestore-utils";
 
 const Card = ({ item }) => {
     const [count, setCount] = useState(1);
+    
     let navigate = useNavigate();
     let colorArr = item.colors;
     let sizeArr = item.sizes;
+    
 
     const increment = (n) => {
         const newCount = count + n;
@@ -16,8 +18,10 @@ const Card = ({ item }) => {
     };
 
     const handleAddToCart = (item, count) => {
+        console.log(item);
         let cartItem = {
             name: item.name,
+           
             quantity: count,
             price: item.price,
         };
@@ -35,9 +39,9 @@ const Card = ({ item }) => {
             <div>
                 <label>Select Color:</label>
                 <select className={styles.Color}>
-                    {colorArr.map((item, i) => (
-                        <option key={i} value={item}>
-                            {item}
+                    {colorArr.map((color, i) => (
+                        <option key={i} value={color}>
+                            {color}
                         </option>
                     ))}
                 </select>

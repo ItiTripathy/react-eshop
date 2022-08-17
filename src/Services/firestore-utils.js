@@ -28,6 +28,7 @@ export const getBagsData = async () => {
 };
 
 export const addItemToCart = async (cartItem) => {
+    console.log(cartItem);
     const collectionRef = firestore.collection("bags-cart");
     const newCart = await collectionRef.add(cartItem);
     return newCart;
